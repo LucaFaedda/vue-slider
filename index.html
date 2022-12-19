@@ -32,7 +32,8 @@
                 </div>
             </div>
             <div class="slideimage">
-                <div class="slides"  v-for="(videogiochi, index) in videogiochi"  v-bind:class="(itemActive == index) ? 'cover' : ''">
+                <div class="slides"  v-for="(videogiochi, index) in videogiochi"  v-bind:class="(itemActive == index) ? 'cover' : ''" @click="changeImage(index)" >
+                    <!-- ci vuole la condizione nel click per cambiare immagine -->
                     <img :src="videogiochi.img" >
                 </div>
             </div>
