@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(3, 3, 27);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideimg{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    float: right;
+    background-color: #fff;
+}
+
+.carosello{
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+}
+
+/* sezione slide */
+
+.slideimg img{
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.slides{
+    width: 100%;
+    height: calc(100% / 5);
+    cursor: pointer;
+}
+
+.slides.cover{
+    background-color: black;
+    border: 1px solid #fff;
+}
+
+/* sezione immagini principali */
+
+.img-carosello, .item, img{
+    height: 100%;
+    position: relative;
+}
+
+.item{
+    display: none;
+}
+
+
+.item.active{
+    display: block;
+}
+
+.item img{
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.img-carosello img{
+    width: 100%;
+}
+
+.descrizione{
+    position: absolute;
+    background-color: rgba(41, 40, 40, 0.637);
+    padding: 10px;
+    border-radius: 20px;
+    color: rgb(247, 247, 247);
+    right: 5px;
+    bottom: 10px;
+}
+
+/* sezione frecce */
+
+.arrow{
+    position: absolute;
+    width: 30px;
+    left: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 20px;
+    background-color: rgb(185, 180, 172);
+    text-align: center;
+    border-radius: 50px;
+}
+
+.arrow:hover{
+    filter: opacity(50%);
+}
+
+.next{
+    top: 0px;
+}
+
+.prev{
+    bottom: -20px;
+}
+
+/* sezione cerchi */
+
+.circles-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.circle{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(174, 174, 174, 0.509);
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.circle.active, .circle:hover{
+    background-color: rgba(174, 174, 174, 1); 
+}
+
+/* sezione pulsanti */
+
+.botton{
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 20px;
+    background: transparent;
+}
+
+#stop{
+    border: red 1px solid;
+    color: red;
+}
+
+#play{
+    border: green 1px solid;
+    color: green;
+}
+
+#reverse{
+    border: yellow 1px solid;
+    color: yellow;
+
+}
+.botton:hover{
+    background-color: rgb(170, 161, 161);
+}
+
+.pulsanti{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    flex-direction: column;
+ }
