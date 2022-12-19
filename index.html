@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Carosello di array d'oggetti</title>
+    <title>Carosello con Vue</title>
 </head>
 <body>
     <div id="app">
@@ -23,13 +23,6 @@
                 </div>
                 <div class="arrow next" @click="next" ><i class="fa-solid fa-arrow-up"></i></div>
                 <div class="arrow prev" @click="prev"><i class="fa-solid fa-arrow-down"></i></div>
-                <div class="circles-container">
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                    <div class="circle"></div>
-                </div>
             </div>
             <div class="slideimage">
                 <div class="slides"  v-for="(videogiochi, index) in videogiochi"  v-bind:class="(itemActive == index) ? 'cover' : ''" @click="changeImage(index)" >
@@ -37,11 +30,11 @@
                     <img :src="videogiochi.img" >
                 </div>
             </div>
-            <div class="pulsanti">
+            <!-- <div class="pulsanti">
                 <button id="stop" class="botton">Stop</button>
                 <button id="play" class="botton">Play</button>
                 <button id="reverse" class="botton">Reverse</button>
-            </div>
+            </div> -->
         </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>

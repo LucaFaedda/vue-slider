@@ -36,7 +36,7 @@ createApp({
                     descrizione: "Tornano i vendicatori più forti del pianeta, una nuova minaccia imcombe"
                 }
                 
-            ]        
+            ],
         }
         },
         methods: {
@@ -57,7 +57,7 @@ createApp({
             {
                 this.itemActive = index;
             },
-        }
+        },
 
 }).mount('#app')
 
