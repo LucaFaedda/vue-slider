@@ -15,7 +15,7 @@ body{
     align-items: center;
 }
 
-.slideimg{
+.slideimage{
     height: 50%;
     display: flex;
     flex-direction: column;
@@ -31,20 +31,19 @@ body{
 
 /* sezione slide */
 
-.slideimg img{
-    width: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-}
 
 .slides{
     width: 100%;
     height: calc(100% / 5);
+    opacity: 0.5;
     cursor: pointer;
 }
-
+.slides img{
+    width: 100%;
+    object-fit: cover;
+}
 .slides.cover{
-    background-color: black;
+    opacity: 1;
     border: 1px solid #fff;
 }
 
@@ -53,6 +52,11 @@ body{
 .img-carosello, .item, img{
     height: 100%;
     position: relative;
+
+}
+
+.img-carosello img{
+    width: 100%;
 }
 
 .item{
@@ -60,7 +64,7 @@ body{
 }
 
 
-.item.active{
+.active{
     display: block;
 }
 
@@ -70,7 +74,7 @@ body{
     position: relative;
 }
 
-.img-carosello img{
+.img-carosello{
     width: 100%;
 }
 
