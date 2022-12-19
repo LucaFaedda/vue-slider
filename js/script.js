@@ -7,7 +7,7 @@ const{
 createApp({
     data(){
         return{
-            
+            autoPlay: null,
             itemActive: 0,
             videogiochi: [
                 {
@@ -38,8 +38,12 @@ createApp({
                 
             ],
         }
+        
+    },
+    created() {
+        this.autoStart();
         },
-        methods: {
+    methods: {
             next()
             {
                 this.itemActive++;
@@ -57,11 +61,17 @@ createApp({
             {
                 this.itemActive = index;
             },
-        },
-        created() {
-            autoPlay = setInterval(this.next, 3000)
+            autoStart(){
+                this.autoPlay = setInterval(() =>{
+                    this.next()
+                }, 1000)
+            },
+            stopPlay(){
+                clearInterval(this.autoPlay)
+                this.autoPlay = null
             }
-        
+
+        },
 
 }).mount('#app')
 
