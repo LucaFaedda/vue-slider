@@ -58,6 +58,10 @@ createApp({
                 this.itemActive = index;
             },
         },
+        created() {
+            autoPlay = setInterval(this.next, 3000)
+            }
+        
 
 }).mount('#app')
 
