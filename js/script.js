@@ -42,7 +42,20 @@ createApp({
         methods: {
         changeImage(index)
         {
-            this.activeImage = index;
+            this.itemActive = index;
+        },
+        next()
+        {
+            this.itemActive++;
+            if(this.itemActive > this.videogiochi.length - 1){
+                this.itemActive = 0
+            }
+        },
+        prev(){
+            this.itemActive--;
+            if(this.itemActive < 0){
+                this.itemActive = this.videogiochi.length - 1
+            }
         }
         }
 
