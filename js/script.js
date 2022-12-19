@@ -61,6 +61,7 @@ createApp({
             {
                 this.itemActive = index;
             },
+            // bisogna definire autoStart qua sennò non funziona lo start and stop sull'immagine
             autoStart(){
                 this.autoPlay = setInterval(() =>{
                     this.next()
