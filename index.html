@@ -13,10 +13,12 @@
         <div class="container">
             <div class="carosello">
                 <div class="img-carosello" @mouseover="stopPlay" @mouseleave="autoStart" >
-                    <div class="item" v-for="(videogiochi, index) in videogiochi" v-bind:class="(itemActive == index) ? 'active' : ''"
+                    <!-- bastava mettere solo l'immagine attiva senza il ciclo for -->
+                    <div class="item" v-for="(videogiochi, index) in videogiochi" v-bind:class="(itemActive === index) ? 'active' : ''"
                     >
-                        <img :src="videogiochi.img">
+                        <img :src="videogiochi.img" alt="videogiochi.titolo">
                         <div class="descrizione">
+                            <!-- Potevo anche scrivere {{ videogiochi[itemActive].title}} -->
                             <h3>{{videogiochi.titolo}}</h3>
                             <p>{{videogiochi.descrizione}}</p>
                         </div>
@@ -26,9 +28,9 @@
                 <div class="arrow prev" @click="prev"><i class="fa-solid fa-arrow-down"></i></div>
             </div>
             <div class="slideimage">
-                <div class="slides"  v-for="(videogiochi, index) in videogiochi"  v-bind:class="(itemActive == index) ? 'cover' : ''" @click="changeImage(index)" >
+                <div class="slides"  v-for="(videogiochi, index) in videogiochi"  v-bind:class="(itemActive === index) ? 'cover' : ''" @click="changeImage(index)" >
                     <!-- ci vuole la condizione nel click per cambiare immagine -->
-                    <img :src="videogiochi.img" >
+                    <img :src="videogiochi.img" alt="videogiochi.titolo">
                 </div>
             </div>
             <!-- <div class="pulsanti">

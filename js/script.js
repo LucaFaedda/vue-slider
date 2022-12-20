@@ -65,7 +65,7 @@ createApp({
             autoStart(){
                 this.autoPlay = setInterval(() =>{
                     this.next()
-                }, 1000)
+                }, 3000)
             },
             stopPlay(){
                 clearInterval(this.autoPlay)
